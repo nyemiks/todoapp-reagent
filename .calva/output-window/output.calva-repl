@@ -1,0 +1,78 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd c:\Users\nyemi\Documents\react\myproject2\todoapp & npx.cmd shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app & popd
+; Using host:port localhost:50708 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
+clj꞉shadow.user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Please start your ClojureScript app (load it in the browser, or whatever is appropriate) so that Calva can connect to its REPL...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.cljs'
+nil
+cljs꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+cljs꞉user꞉> (def outcome1 false)
+#'user/outcome1
+cljs꞉user꞉> 
+(def outcome2 true)
+#'user/outcome2
+cljs꞉user꞉> 
+(int outcome1)
+nil
+; ------ WARNING - :invalid-arithmetic -------------------------------------------
+;  Resource: <eval>:1:1
+;  cljs.core/bit-or, all arguments must be numbers, got [boolean number] instead
+; --------------------------------------------------------------------------------
+; 
+cljs꞉user꞉> 
+(def tasks [{:name "play" :done false}, {:name "rest" :done false}, {:name "read" :done true}, {:name "work" :done false}, {:name "sing" :done true}])
+#'user/tasks
+cljs꞉user꞉> 
+tasks
+[{:name "play", :done false}
+ {:name "rest", :done false}
+ {:name "read", :done true}
+ {:name "work", :done false}
+ {:name "sing", :done true}]
+cljs꞉user꞉> 
+(sort-by :done tasks)
+({:name "play", :done false}
+ {:name "rest", :done false}
+ {:name "work", :done false}
+ {:name "read", :done true}
+ {:name "sing", :done true})
+cljs꞉user꞉> 
+:cljs/quit
+:cljs/quit
+; Exited CLJS session. You are now in CLJ again.
+; You can rejoin the CLJS REPL via 
+;     (shadow.cljs.devtools.api/repl :app)
+cljs꞉user꞉> 
+(System/exit 0)
+; nREPL Connection was closed
